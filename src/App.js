@@ -19,3 +19,11 @@ class App extends Component {
 }
 
 export default App;
+
+var restraunts = [
+  {"mando's":{
+    'rating': 5,
+    'price' : '$',
+    'hours' : '5-9'
+  }}
+]
