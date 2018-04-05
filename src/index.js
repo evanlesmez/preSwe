@@ -2,25 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-
-
-class Restraunter extends React.Component {
-    render() {
-      return (
-        <div>
-          Hello {this.props.name}
-        </div>
-      );
-    }
+function Restraunter(props) {
+  const listy = (
+    <ul>
+      {props.restraunts.map((rest) => 
+        <li key={rest.id}>
+          Name: {rest.name}
+          <li> Rating: {rest.rating} </li>
+          <li> Price: {rest.price} </li>
+          <li> Hours: {rest.hours}</li>
+        </li>
+        
+      )}
+    </ul>
+    );
+    return (
+      <div>
+        {listy}
+      </div>
+    );
   }
-ReactDOM.render(
-    <Restraunter name= "skwad" />,document.getElementById('root')
+  const restraunts = [   
+    {id: 1, name: "mandos", rating: 5, price: '$', hours : '5-9'},
+    {id: 2, name: "schwiftys", rating: 100, price : '-$', hours : '0-24'}
+  ];
+  // restraunts array has to be before ReactDOM.render
+  ReactDOM.render(<Restraunter restraunts={restraunts} />,
+    document.getElementById('root')
   );
 
-  var restraunts = [
-    {"mando's":{
-      'rating': 5,
-      'price' : '$',
-      'hours' : '5-9'
-    }}
-  ]
+ 
