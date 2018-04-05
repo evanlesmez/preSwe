@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
 
 class Restraunter extends React.Component {
     render() {
@@ -16,8 +13,8 @@ class Restraunter extends React.Component {
       );
     }
   }
-  ReactDOM.render(
-    <Restraunter name= "skwad" />
+ReactDOM.render(
+    <Restraunter name= "skwad" />,document.getElementById('root')
   );
 
   var restraunts = [
