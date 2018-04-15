@@ -23,12 +23,17 @@ class Restraunter extends React.Component {
         var resties = [];
         var i;
         for (i= 0; i < results.length; i++) {
-          
-         
+          var temp = results[i].opening_hours.open_now
+          if(temp===true){
+            temp = "Open now"
+          }
+          else{
+            temp = "Closed now"
+          }
           var entry = {
             name: results[i].name,
             rating: results[i].rating,
-            hours: results[i].opening_hours.open_now
+            hours: temp
           }
           resties.push(entry);
 
