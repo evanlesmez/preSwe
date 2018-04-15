@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { PageHeader } from "react-bootstrap"
 import axios from 'axios';
 
 /* const dummies = [   
@@ -72,6 +73,7 @@ class Restraunter extends React.Component {
     );
     return (
       <div>
+        <PageHeader id = "title">Local Restaurants</PageHeader>
         {listy}
       </div>
     );
